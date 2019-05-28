@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/state_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorFrame1"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/state_4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/state_2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgCar_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/state_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorFrame2"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/state_3"
+        app:layout_constraintLeft_toRightOf="@id/state_1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgCar_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/state_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorFrame3"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/line_mid"
+        app:layout_constraintLeft_toRightOf="@id/state_4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/state_2">
+
+        <ImageView
+            android:id="@+id/imgCar_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/state_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorFrame4"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/line_mid"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/state_3"
+        app:layout_constraintTop_toBottomOf="@id/state_1">
+
+        <ImageView
+            android:id="@+id/imgCar_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/line_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.500684" />
+
+
+    <RelativeLayout
+        android:id="@+id/state_0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line_mid">
+
+        <ImageView
+            android:id="@+id/imgCar_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvTimeCount"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:text=""
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line_mid" />
+
+    <ImageView
+        android:id="@+id/hourGlass"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/hourglass_64"
+        app:layout_constraintBottom_toBottomOf="@id/tvTimeCount"
+        app:layout_constraintRight_toLeftOf="@id/tvTimeCount"
+        app:layout_constraintTop_toTopOf="@id/tvTimeCount" />
+
+    <TextView
+        android:id="@+id/z_dontcare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@string/point"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/line_mid" />
+
+    <TextView
+        android:id="@+id/tvPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@id/z_dontcare"
+        app:layout_constraintTop_toTopOf="@id/line_mid" />
+</android.support.constraint.ConstraintLayout>
